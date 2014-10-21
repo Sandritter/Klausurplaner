@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="stammdaten">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ausstattungsliste">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ausstattung" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="bezeichnung" type="xs:string" minOccurs="1"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="klausurliste">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="klausur" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="klausurname" type="xs:string" minOccurs="1"/>
+										<xs:element name="lvNo" type="xs:string" minOccurs="1"/>
+										<xs:element name="semester" type="xs:decimal" minOccurs="1"/>
+										<xs:element name="teilnehmer" type="xs:decimal" />
+										<xs:element name="mehrtaegig" type="xs:boolean" minOccurs="1"/>
+										<xs:element name="dauer" type="xs:decimal"/>
+										<xs:element name="art" type="xs:string" minOccurs="1"/>
+										<xs:element name="kategorie" type="xs:decimal"/>
+										<xs:element name="ausstattungen" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="geraet" type="xs:string" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="raumliste">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="raum" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="bezeichnung" type="xs:string" minOccurs="1"/>
+										<xs:element name="gebaeude" type="xs:string" minOccurs="1"/>
+										<xs:element name="campus" type="xs:string" minOccurs="1"/>
+										<xs:element name="kapazitaet" type="xs:decimal" minOccurs="1"/>
+										<xs:element name="ausstattungen" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="geraet" type="xs:string" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="aufsichtspersonliste">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="aufsichtsperson" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="name" type="xs:string" minOccurs="1"/>
+										<xs:element name="vorname" type="xs:string" minOccurs="1"/>
+										<xs:element name="kuerzel" type="xs:string" minOccurs="1"/>
+										<xs:element name="telefon" type="xs:string" />
+										<xs:element name="handy" type="xs:string" />
+										<xs:element name="email" type="xs:string" />
+										<xs:element name="verfuegbarkeiten">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="verfuegbar" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
