@@ -10,3 +10,11 @@ Um den den Klausurplaner zu starten, ziehen sich das Repository und öffnen sie 
 
 To start the programm, fork this repository and open it with eclipse. Go to the directory Klausurplaner/src/de/klausurplaner/starter and execute Starter.java
 
+Demo
+====
+
+http://vimeo.com/110443720
+
+Passwort auf Anfrage          
+
+Please contact me to get the password
